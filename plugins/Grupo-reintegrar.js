@@ -17,7 +17,7 @@ let handler = async (m, { conn, participants }) => {
   const reintegrados = []
 
   await m.reply(
-    `🎖️ *Protocolo de Reintegración Shizuka*
+    `🎖️ *Protocolo de Reintegración Gx*
 
 📋 *Cantidad de ex-operativos localizados:* ${aReintegrar.length}
 🔄 *Iniciando reintegración uno por uno...*
@@ -48,7 +48,7 @@ handler.tags = ['grupo']
 handler.command = ['reintegrar', 'restore']
 handler.group = true
 handler.admin = true
-handler.botAdmin = true
+handler.botAdmin = false
 
 export default handler
 
