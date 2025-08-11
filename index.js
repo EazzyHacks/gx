@@ -40,15 +40,15 @@ const PORT = process.env.PORT || process.env.SERVER_PORT || 3000
 //const yuw = dirname(fileURLToPath(import.meta.url))
 //let require = createRequire(megu)
 let { say } = cfonts
-console.log(chalk.bold.redBright(`\n✰ 𝙄𝙣𝙞𝙘𝙞𝙖𝙣𝙙𝙤 𝙎𝙝𝙞𝙯𝙪𝙠𝙖-𝘼𝙄 ✰\n`))
+console.log(chalk.bold.redBright(`\n✰ Ｇｘ Ｓｔｏｒｅ Ｂｏｔ ✰\n`))
 
-say('Shizuka-AI', {
+say('Ｇｘ Ｓｔｏｒｅ Ｂｏｔ', {
 font: 'block',
 align: 'center',
 colors: ['magentaBright']
 })
 
-say(`Power by Carlos`, {
+say(`Ｇｘ Ｓｔｏｒｅ Ｂｏｔ`, {
 font: 'console',
 align: 'center',
 colors: ['blueBright']
