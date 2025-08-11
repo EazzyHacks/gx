@@ -36,8 +36,8 @@ handler.before = async function (m, { conn, participants, groupMetadata }) {
         23: `🔗 *Enlace Actualizado* 🔗\n\n▸ *Usuario*: ${usuario}\n\n_El enlace del grupo ha sido restablecido_`,
         25: `⚙️ *Configuración Modificada* ⚙️\n\n▸ *Usuario*: ${usuario}\n▸ *Nuevo estado*: ${m.messageStubParameters[0] == 'on' ? 'Solo admins' : 'Todos'}\n\n_Permisos de edición actualizados_`,
         26: `🔒 *Estado del Grupo* 🔒\n\n▸ *Usuario*: ${usuario}\n▸ *Nuevo estado*: ${m.messageStubParameters[0] == 'on' ? 'Cerrado (solo admins)' : 'Abierto (todos)'}\n\n_Configuración de mensajes modificada_`,
-        29: `👑 *Nuevo Administrador* 👑\n\n▸ *Usuario*: @${m.messageStubParameters[0].split('@')[0]}\n▸ *Promovido por*: ${usuario}\n\n_Felicidades por tu nueva posición_`,
-        30: `⚡ *Administrador Removido* ⚡\n\n▸ *Usuario*: @${m.messageStubParameters[0].split('@')[0]}\n▸ *Removido por*: ${usuario}\n\n_Rol administrativo retirado_`
+        29: `🤖 𝐄𝐯𝐨𝐥𝐮𝐭𝐢𝐨𝐧 𝐀𝐯𝐢𝐬𝐨 🤖\n\n 🗣️ 𝐍𝐮𝐞𝐯𝐨 𝐀𝐝𝐦𝐢𝐧 : @${m.messageStubParameters[0].split`@`[0]}\n🫶🏼 𝐆𝐫𝐚𝐜𝐢𝐚𝐬 𝐀 : ${usuario}\n\n> 𝐒𝐢 𝐃𝐞𝐬𝐞𝐚𝐬 𝐂𝐨𝐦𝐩𝐫𝐚𝐫 𝐄𝐥 𝐁𝐨𝐭 𝐄𝐬𝐜𝐫𝐢𝐛𝐞 .𝐬𝐡𝐨𝐩𝐞𝐯𝐨 👑`,
+        30: `🤖 𝐄𝐯𝐨𝐥𝐮𝐭𝐢𝐨𝐧 𝐀𝐯𝐢𝐬𝐨 🤖\n\n 🗣️ 𝐀𝐝𝐦𝐢𝐧 𝐌𝐞𝐧𝐨𝐬 : @${m.messageStubParameters[0].split`@`[0]}\n☠️ 𝐅𝐮𝐞 𝐐𝐮𝐢𝐭𝐚𝐝𝐨 𝐏𝐨𝐫 :  ${usuario}\n\n> 𝐒𝐢 𝐃𝐞𝐬𝐞𝐚𝐬 𝐂𝐨𝐦𝐩𝐫𝐚𝐫 𝐄𝐥 𝐁𝐨𝐭 𝐄𝐬𝐜𝐫𝐢𝐛𝐞 .𝐬𝐡𝐨𝐩𝐞𝐯𝐨 👑`
     }
 
     if (messages[m.messageStubType]) {
