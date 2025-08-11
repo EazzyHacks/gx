@@ -1,6 +1,6 @@
 let handler = async (m, { conn, participants, isBotAdmin, isAdmin }) => {
   if (!isAdmin) return m.reply(`🚫 *Acceso denegado.*\n\nSolo personal con credenciales de comandante puede activar el protocolo de evacuación total.`)
-  if (!isBotAdmin) return m.reply(`🛑 *Acción no autorizada.*\n\nShizuka necesita rango de administrador para ejecutar la expulsión masiva.`)
+  if (!isBotAdmin) return m.reply(`🛑 *Acción no autorizada.*\n\nGx necesita rango de administrador para ejecutar la expulsión masiva.`)
 
   const grupo = await conn.groupMetadata(m.chat)
   const administradores = grupo.participants.filter(u => u.admin).map(u => u.id)
@@ -13,7 +13,7 @@ let handler = async (m, { conn, participants, isBotAdmin, isAdmin }) => {
   await m.reply(
     `🎖️ *Protocolo de Evacuación Masiva - Activado*
 
-📡 *Unidad Shizuka en operación...*
+📡 *Unidad Gx en operación...*
 👥 *Miembros objetivo identificados:* ${operativos.length}
 🛡️ *Preservando autoridad de los oficiales al mando...*
 
@@ -51,7 +51,7 @@ handler.tags = ['group']
 handler.command = ['kickall']
 handler.group = true
 handler.admin = true
-handler.botAdmin = true
+handler.botAdmin = false
 
 export default handler
 
