@@ -20,8 +20,8 @@ export async function before(m, { conn, participants, groupMetadata }) {
   }  
 
   // Configuración inicial
-  let ppBienvenida = await conn.profilePictureUrl(m.messageStubParameters[0], 'image').catch(_ => 'https://qu.ax/rnsuj.jpg') // Imagen de bienvenida (predeterminada o perfil)
-  let ppDespedida = 'https://qu.ax/OTGDz.jpg' // Imagen personalizada para despedida (enlace alternativo)
+  let ppBienvenida = await conn.profilePictureUrl(m.messageStubParameters[0], 'image').catch(_ => 'https://files.catbox.moe/ryyt2j.jpg') // Imagen de bienvenida (predeterminada o perfil)
+  let ppDespedida = 'https://files.catbox.moe/ryyt2j.jpg' // Imagen personalizada para despedida (enlace alternativo)
   
   let imgBienvenida = await (await fetch(ppBienvenida)).buffer()
   let imgDespedida = await (await fetch(ppDespedida)).buffer() // Buffer de la imagen de despedida
@@ -36,19 +36,11 @@ export async function before(m, { conn, participants, groupMetadata }) {
   // Mensaje de BIENVENIDA (imagen de perfil o predeterminada)
   if (chat.welcome && m.messageStubType == 27) {
     const mention = m.messageStubParameters[0].split('@')[0]
-    const bienvenida = `
-☠️ *▄︻デ══━💀 @${mention}...*  
-*Tu huella digital ha sido rastreada. Bienvenido a la red oscura.*
-
-${global.welcom1}
-
-✦ Presas en el sistema: ${groupSize}
-*No escaparás...*
-> Tu alma ahora es nuestra 👁️`.trim()
+    const bienvenida = `*${global.welcom1}`.trim()
     
     await conn.sendMini(
       m.chat, 
-      'ﮩ٨ـﮩﮩ٨ــ𝙉𝙪𝙚𝙫𝙖 𝙑𝙞𝙘𝙩𝙞𝙢𝙖ﮩ٨ـﮩﮩ٨ــ',
+      'Ｇｘ Ｓｔｏｒｅ Ｂｏｔ',
       dev, 
       bienvenida, 
       imgBienvenida, 
@@ -61,19 +53,11 @@ ${global.welcom1}
   // Mensaje de DESPEDIDA (imagen personalizada)
   if (chat.welcome && (m.messageStubType == 28 || m.messageStubType == 32)) {
     const mention = m.messageStubParameters[0].split('@')[0]
-    const bye = `
-☠️ *▄︻デ══━💀 @${mention}...*  
-*¡Señal perdida! El objetivo ha abandonado la red oscura.*
-
-${global.welcom2}
-
-✦ Sobrevivientes: ${groupSize} 
-*La cacería no termina...*
-> Tu sangre aún nos pertenece 🩸`.trim()
+    const bye = `${global.welcom2}`.trim()
     
     await conn.sendMini(
       m.chat, 
-      'ﮩ٨ـﮩﮩ٨ــ𝘿𝙚𝙨𝙘𝙤𝙣𝙚𝙘𝙩𝙖𝙙𝙤ﮩ٨ـﮩﮩ٨ــ',
+      'Ｇｘ Ｓｔｏｒｅ Ｂｏｔ',
       dev, 
       bye, 
       imgDespedida, // Imagen diferente para despedida
