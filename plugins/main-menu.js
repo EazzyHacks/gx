@@ -5,16 +5,15 @@ const handler = async (m, { conn, usedPrefix }) => {
   const plugins = Object.values(global.plugins || {}).filter(p => !p?.disabled);
 
   // --- Variables para la apariencia de canal (puedes personalizarlas) ---
-  const botname = 'Shizuka-AI';
+  const botname = 'Ｇｘ Ｓｔｏｒｅ Ｂｏｔ';
   const textbot = 'Asistente virtual de WhatsApp';
-  const banner = 'https://qu.ax/diNXY.jpg';
-  const redes = 'https://chat.whatsapp.com/G5v3lHn3w0x04kP2b39q31';
+  const banner = 'https://files.catbox.moe/ryyt2j.jpg';
+  const redes = 'https://chat.whatsapp.com/I4yJ2vrlhGXH3JRg06mxFZ';
 
   // --- Mapeo de categorías con decoraciones mejoradas ---
   const categoryMap = {
     main:          '🌟 𝗖𝗼𝗺𝗮𝗻𝗱𝗼𝘀 𝗣𝗿𝗶𝗻𝗰𝗶𝗽𝗮𝗹𝗲𝘀',
     rg:            '📝 𝗥𝗲𝗴𝗶𝘀𝘁𝗿𝗼',
-    serbot:        '🤖 𝗦𝘂𝗯-𝗕𝗼𝘁',
     info:          '📋 𝗜𝗻𝗳𝗼𝗿𝗺𝗮𝗰𝗶𝗼́𝗻 𝗱𝗲𝗹 𝗕𝗼𝘁',
     descargas:     '🚀 𝗗𝗲𝘀𝗰𝗮𝗿𝗴𝗮𝘀',
     buscadores:    '🔍 𝗕𝘂𝘀𝗰𝗮𝗱𝗼𝗿𝗲𝘀',
@@ -78,7 +77,7 @@ const handler = async (m, { conn, usedPrefix }) => {
 
   // --- Construye el menú con la nueva decoración ---
   let menu = `
-╭━━━❪ ✨ 𝑺𝒉𝒊𝒛𝒖𝒌𝒂-𝑨𝑰 ✨ ❫━━━╮
+╭━━━❪ ✨ *Ｇｘ Ｓｔｏｒｅ Ｂｏｔ* ✨ ❫━━━╮
 │
 │ 🤖 *Versión:* v1.0.0
 │ 👤 *Creador:* Carlos
@@ -104,7 +103,7 @@ const handler = async (m, { conn, usedPrefix }) => {
     }
     menu += `╰───────────────\n\n`;
   }
-  menu += '> _Creado por Carlos_';
+  menu += '> ';
 
   // --- Envía el mensaje solo con la imagen completa y el texto del menú ---
   await conn.sendMessage(m.chat, {
